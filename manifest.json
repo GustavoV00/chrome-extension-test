@@ -1,0 +1,24 @@
+{
+  "name": "Extensão que faz alguma coisa",
+  "description": "Faz alguma busca no youtube",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting", "webRequest"],
+  "host_permissions": [
+    "https://pirate-bay-proxy.org/*",
+    "https://pirate-bays.net/*",
+    "https://pirate-bays.net/",
+    "https://tpb.party/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://pirate-bay-proxy.org/*",
+        "https://pirate-bays.net/*",
+        "https://pirate-bays.net/",
+        "https://tpb.party/*"
+      ],
+      "js": ["script.js"]
+    }
+  ]
+}
