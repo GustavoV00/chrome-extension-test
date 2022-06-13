@@ -5,18 +5,14 @@
   "manifest_version": 3,
   "permissions": ["activeTab", "scripting", "webRequest"],
   "host_permissions": [
-    "https://pirate-bay-proxy.org/*",
-    "https://pirate-bays.net/*",
-    "https://pirate-bays.net/",
-    "https://tpb.party/*"
+    "https://thepiratebay.party/",
+    "https://thepiratebay.party/*"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://pirate-bay-proxy.org/*",
-        "https://pirate-bays.net/*",
-        "https://pirate-bays.net/",
-        "https://tpb.party/*"
+        "https://thepiratebay.party/",
+        "https://thepiratebay.party/*"
       ],
       "js": ["script.js"]
     }
