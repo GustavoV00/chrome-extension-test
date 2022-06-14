@@ -3,18 +3,7 @@
   "description": "Faz alguma busca no youtube",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": ["activeTab", "scripting", "webRequest"],
-  "host_permissions": [
-    "https://thepiratebay.party/",
-    "https://thepiratebay.party/*"
-  ],
-  "content_scripts": [
-    {
-      "matches": [
-        "https://thepiratebay.party/",
-        "https://thepiratebay.party/*"
-      ],
-      "js": ["script.js"]
-    }
-  ]
+  "action": {
+    "default_popup": "popup.html"
+  }
 }
