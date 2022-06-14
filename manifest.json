@@ -3,7 +3,10 @@
   "description": "Faz alguma busca no youtube",
   "version": "1.0",
   "manifest_version": 3,
-  "action": {
-    "default_popup": "popup.html"
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
   }
 }
