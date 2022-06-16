@@ -42,5 +42,5 @@ chrome.runtime.onInstalled.addListener(async () => {
     const tabsTitles = await getAllTabsTitles(tabs)
     sendTabsDataToServer(tabsTitles)
 
-  }, 3000)
+  }, 5000)
 });
