@@ -27,7 +27,6 @@ app.get("/", (req, res) => {
 })
 
 app.post("/tabs", async (req, res) => {
-  console.log(req.body)
   const tabs = req.body
   writeTabsToAFile(tabs)
   res.sendStatus(200)
@@ -43,7 +42,6 @@ app.listen(PORT, () => {
 /* --------------------------------------------- */
 function writeTabsToAFile(tabs) {
   const data = tabs.join(', ')
-  console.log(data)
   try {
     myLogger.log(data)
   } catch (error) {
