@@ -1,9 +1,10 @@
 # request-to-server
 
-Pega todas as guias abertas que o usuário está utilizando e envia para um servidor local.
+Pega uma guia por vez, conforme o usuário vai mudando de guia ou clicando em novos links.
 
 ## Como usar
-É necessário carregar a extensão em chrome://extensions/ e rodar um servidor local na máquina, 
-nesse mesmo diretório em simpleServer/ tem um servidor básico utilizando o express. Toda vez que a extensão pega as guias dos usuários, ela envia para o ip definido no extension/background.js e envia para o ip definido em simpleServer/index.js na porta 8080. Para rodar o servidor basta rodar um npm install para instalar as dependências ("cors e express"). 
 
-Cada requisição que chegar no lado do servidor, será deixado em logs/tabs.txt e caso tenha algum erro, o erro fica em logs/erro.txt
+É necessário instalar a extensão em chrome://extensions.
+E rodar um servidor local. No diretório server/ possui um servidor feito em python e flask que roda no localhost:5000. Todas as tabs que o usuário acessa, são enviadas para http://localhost:5000/tabs e então são salvas em uma lista, que será enviado para um servidor remoto mais tarde.
+
+É necessário instalar as dependencias do projeto, `pip install flask`, `pip install validators`, `pip install flask-cors` para rodar o servidor.
