@@ -21,11 +21,9 @@ def verifyMultipleInserts(data):
     if(packetOfTabs):
         print(packetOfTabs)
         if(data == packetOfTabs[lastIndex]):
-            print("N inseriu nada")
             return
 
     packetOfTabs.append(data)
-    print("Inseriu aqui")
     return
 
 @app.route("/tabs", methods=['POST'])
